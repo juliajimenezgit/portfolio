@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    @apply bg-dark-bg text-text-light;
+  }
+  
+  .light-mode {
+    @apply bg-white text-gray-900;
+  }
+  
+  .light-mode .text-text-light {
+    @apply text-gray-900;
+  }
+  
+  .light-mode .text-text-muted {
+    @apply text-gray-600;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-primary hover:bg-blue-600 text-white px-6 py-3 rounded-2xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-violet-secondary hover:bg-violet-600 text-white px-6 py-3 rounded-2xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-blue-accent text-blue-accent hover:bg-blue-accent hover:text-white px-6 py-3 rounded-2xl font-medium transition-all duration-300;
+  }
+  
+  .light-mode .btn-outline {
+    @apply border-2 border-blue-primary text-blue-primary hover:bg-blue-primary hover:text-white;
+  }
+  
+  .section-padding {
+    @apply px-6 py-16 md:px-8 lg:px-12 xl:px-16;
+  }
+  
+  .card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-soft;
+  }
+  
+  .light-mode .card {
+    @apply bg-white/80 border-gray-200;
+  }
+  
+  /* Tipografías modernas 2025-2026 */
+  .font-display {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+  }
+  
+  .font-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .font-ultra {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+}
